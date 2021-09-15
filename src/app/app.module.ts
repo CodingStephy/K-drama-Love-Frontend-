@@ -9,12 +9,18 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TrendingComponent } from './trending/trending.component';
 import { RecommendedComponent } from './recommended/recommended.component';
+import { AllDramasComponent } from './all-dramas/all-dramas.component';
+import { SingleDramaComponent } from './single-drama/single-drama.component';
+import { FormComponent } from './form/form.component';
 @NgModule({
   declarations: [
     AppComponent,
     CarouselComponent,
     TrendingComponent,
-    RecommendedComponent
+    RecommendedComponent,
+    AllDramasComponent,
+    SingleDramaComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
