@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,9 @@ import { AllDramasComponent } from './all-dramas/all-dramas.component';
 import { SingleDramaComponent } from './single-drama/single-drama.component';
 import { FormComponent } from './form/form.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +27,19 @@ import { FooterComponent } from './footer/footer.component';
     AllDramasComponent,
     SingleDramaComponent,
     FormComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     YouTubePlayerModule,
-    NgbModule
+    NgbModule,
+    RouterModule.forRoot([
+      {path: 'login', component: LoginComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
