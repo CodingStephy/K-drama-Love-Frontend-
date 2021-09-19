@@ -1,3 +1,17 @@
-<p>{{show.description}}</p>
-<h1>{{show.title}}</h1>
-<h1>test</h1>
+
+<div>
+<h1>{{shows.title}}</h1>
+<h1 >{{shows.description}}</h1>
+<p>{{shows.episode_numbers}}</p>
+<p>{{shows.genre}}</p>
+<p>{{shows.release_year}}</p>
+<p>{{shows.streaming_platform}}</p>
+<p>{{shows.writer}}</p>
+<img [src]= "shows.image">
+<div *ngFor="let actors of shows.actors">
+<p >{{actors.name}}</p>
+<img [src]= "actors.photo">
+</div>
+</div>
+
+<app-footer></app-footer>

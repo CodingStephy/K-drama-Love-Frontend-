@@ -3,7 +3,7 @@ export type Show = {
         id?: number;
         name: string;
         photo: string;
-    }]
+    }];
     description: string;
     episode_numbers: string;
     genre: string;

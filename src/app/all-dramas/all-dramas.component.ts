@@ -10,14 +10,15 @@ import {Show} from "../../types"
 })
 export class AllDramasComponent implements OnInit {
   kdsrv: KdramaService;
-  id: number | null = null;
+  // id: number | null = null;
   route;
   // shows: Show ={
   //   image: "",
-  //   actors: [{      
+  //   actors: {      
   //     name: "",
   //     photo: "",
-  //   }],
+  //   },
+  //   id: 0,
   //   description: "",
   //   episode_numbers: "",
   //   genre: "",    
@@ -38,7 +39,7 @@ export class AllDramasComponent implements OnInit {
     
 
   ngOnInit(): void {
-    this.kdsrv.getShows();
+    this.kdsrv.getShows();    
     // this.route.params.subscribe((params) => {
     //   this.id = params['id'];
     //   const show = this.kdsrv.shows.find((s) => s.id == params.id);

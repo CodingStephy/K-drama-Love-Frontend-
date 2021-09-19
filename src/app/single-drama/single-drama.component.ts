@@ -12,7 +12,7 @@ export class SingleDramaComponent implements OnInit {
   kdsrv;
   id: number | null = null;
   route;
-  show: Show ={
+  shows: Show ={
     image: "",
     actors: [{      
       name: "",
@@ -26,8 +26,6 @@ export class SingleDramaComponent implements OnInit {
     title: "",
     writer: "",
   }
-
-
   router: Router;
 
 
@@ -38,15 +36,15 @@ export class SingleDramaComponent implements OnInit {
    }
 
    ngOnInit(): void {
-    
+    // this.kdsrv.getShows();    
     this.route.params.subscribe((params) => {
       this.id = params['id'];
-      const show = this.kdsrv.shows.find((s) => s.id == params.id);
-      if(show) {
-        this.show = show
+      const show = this.kdsrv.shows.find((s) => s[0].id == params.id);
+      if(show[0]) {
+        this.shows = show[0]
       }
     })
   }
 
-
 }
+
