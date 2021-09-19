@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from "@angular/router";
+import{KdramaService} from "../kdrama.service"
+import {Show} from "../../types"
 
 @Component({
   selector: 'app-single-drama',
@@ -6,10 +9,44 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-drama.component.sass']
 })
 export class SingleDramaComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  kdsrv;
+  id: number | null = null;
+  route;
+  show: Show ={
+    image: "",
+    actors: [{      
+      name: "",
+      photo: "",
+    }],
+    description: "",
+    episode_numbers: "",
+    genre: "",    
+    release_year: "",
+    streaming_platform: "",
+    title: "",
+    writer: "",
   }
+
+
+  router: Router;
+
+
+  constructor(route: ActivatedRoute, router: Router, kdramaService: KdramaService) {
+    this.kdsrv = kdramaService
+    this.route = route
+    this.router = router
+   }
+
+   ngOnInit(): void {
+    
+    this.route.params.subscribe((params) => {
+      this.id = params['id'];
+      const show = this.kdsrv.shows.find((s) => s.id == params.id);
+      if(show) {
+        this.show = show
+      }
+    })
+  }
+
 
 }

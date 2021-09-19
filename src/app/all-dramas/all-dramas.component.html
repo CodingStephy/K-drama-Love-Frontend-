@@ -1,1 +1,6 @@
-<p>all-dramas works!</p>
+<div *ngFor="let show of kdsrv.shows; index as i">
+    <a [routerLink]="'/show/' + show.id"><img [src]="show.image" alt="image"> </a>
+    <h1>{{show.description}}</h1>
+    <h1>{{show.title}}</h1>
+    
+</div>

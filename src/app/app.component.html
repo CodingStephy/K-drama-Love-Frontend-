@@ -15,7 +15,7 @@
         <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Explore</a>
+        <a class="nav-link" [routerLink]="'/show'" routerLinkActive="active" (click)="isMenuCollapsed = true">Explore</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">About</a>
@@ -26,10 +26,5 @@
     </ul>
   </div>
 </nav>
-<app-carousel></app-carousel>
-<h2 class="trendhd">Trending</h2>
-<app-trending></app-trending>
-<h2 class="recommendhd">Recommended For You</h2>
-<app-recommended></app-recommended>
 <app-footer></app-footer>
 <router-outlet></router-outlet>
