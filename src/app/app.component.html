@@ -21,10 +21,13 @@
         <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">About</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">My List</a>
+        <a class="nav-link" [routerLink]="'/mylist'" (click)="isMenuCollapsed = true">My List</a>
       </li>      
        <li class="nav-item">
         <a class="nav-link" [routerLink]="'/signup'" (click)="isMenuCollapsed = true">Signup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/login'" (click)="isMenuCollapsed = true">Login</a>
       </li>
     </ul>
   </div>

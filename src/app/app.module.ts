@@ -20,6 +20,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { MyListComponent } from './my-list/my-list.component';
 import { AboutComponent } from './about/about.component';
+import { AddtolistComponent } from './addtolist/addtolist.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     MyListComponent,
     AboutComponent,
+    AddtolistComponent,
    
   ],
   imports: [

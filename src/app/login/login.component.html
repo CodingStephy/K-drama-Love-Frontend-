@@ -1,1 +1,5 @@
-<p>login works!</p>
+<form #myform='ngForm' (ngSubmit)='handleSubmit(myform)'>
+<input type ='email' name='email' ngModel>
+<input type ='password' name='password' ngModel>
+<input type='submit' value='submit'>
+</form>
