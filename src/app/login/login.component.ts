@@ -8,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   constructor() { }
-
+  async handleSubmit(form: any) {
+    await fetch('https://myappchk.herokuapp.com/login', {
+       method: 'post', 
+       headers: {
+         "Content-Type": "application/json"
+       },
+       body: JSON.stringify(form.values)
+     })
+   }
   ngOnInit(): void {
   }
 

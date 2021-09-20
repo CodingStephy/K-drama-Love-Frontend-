@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,8 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
+import { MyListComponent } from './my-list/my-list.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
+    MyListComponent,
+    AboutComponent,
    
   ],
   imports: [
@@ -41,7 +45,9 @@ import { HomeComponent } from './home/home.component';
     NgbModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent}
-    ])
+    ]),
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
