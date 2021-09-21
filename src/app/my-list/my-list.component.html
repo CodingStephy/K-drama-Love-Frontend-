@@ -1,1 +1,21 @@
-<h1>My watchlist</h1>
+<div class='center'>
+<div class='allcard' *ngFor="let shows of shows; index as i">
+
+<div class="card mb-3 " >
+  <div class="row g-0">
+    <div class="col-md-4">
+       <a [routerLink]="'/show/' + shows.id"><img [src]="shows.image" alt="image" class="img-fluid"> </a>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{shows.title}}</h5>
+        <p class="card-text">
+          Episodes: {{shows.episode_numbers}}
+        </p>
+        <button (click)="removeFromList(shows)">remove from list</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    

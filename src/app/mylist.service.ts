@@ -1,22 +1,33 @@
 import { Injectable } from '@angular/core';
-import {Show} from "../types"
-import { SingleDramaComponent } from './single-drama/single-drama.component';
+import { BehaviorSubject } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
-export class myListService {
-    items: SingleDramaComponent[] = []
-    addToList(SingleDramaComponent: SingleDramaComponent) {
-      this.items.push(SingleDramaComponent)
+export class MyListService {
+    myDramaList: any =[]
+    showList = new BehaviorSubject<any>([])
+
+    constructor(){
+
     }
-  
-    getItems(){
-      return this.items
+    getShows(){
+       return this.showList.asObservable()
     }
-  
-    clearList(){
-      this.items = []
-      return this.items
+    setShow(show: any){
+        this.myDramaList.push(...show)
+        this.showList.next(show)
     }
-  
+    addToList(show: any){
+        this.myDramaList.push(show)
+        this.showList.next(this.myDramaList)
+        console.log(this.myDramaList )
+    }
+    removeFromList(show: any){
+        this.myDramaList.map((a: any, index: any) =>{
+            if(show.id === a.id){
+                this.myDramaList.splice(index, 1)
+            }
+        })
+    }
 }

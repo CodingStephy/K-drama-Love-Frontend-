@@ -9,6 +9,7 @@ export class KdramaService {
   url2= 'https://myappchk.herokuapp.com/login'
   // Array<Array<Show>>
   shows: Array<any> = [];
+  myDramaList: any = [];
   constructor() { 
     this.getShows()
     
@@ -20,5 +21,21 @@ export class KdramaService {
     return data
     
   }
-  
+  setDrama(shows : any){
+    this.myDramaList.push(...shows)
+    // this.shows.next(this.myDramaList)
+  }
+  addToList(shows : any) {
+   this.myDramaList.push(shows)
+  }
+
+ 
+
+  removeFromList(shows: any){
+   this.myDramaList.map((a: any, index: any)=>{
+     if(shows.id === a.id ){
+       this. myDramaList.splice(index,1)
+     }
+   })
+  }
 }
