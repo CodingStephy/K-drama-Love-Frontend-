@@ -14,10 +14,12 @@ export class LoginComponent implements OnInit {
        headers: {
          "Content-Type": "application/json"
        },
-       body: JSON.stringify(form.values)
+       body: JSON.stringify(form.value)
      })
    }
   ngOnInit(): void {
   }
-
+onClick= ()=>{
+  alert('you are logged in')
+}
 }

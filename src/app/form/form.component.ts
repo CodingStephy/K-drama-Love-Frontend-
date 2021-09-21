@@ -10,12 +10,13 @@ export class FormComponent implements OnInit {
   
   constructor() { }
   async handleSubmit(form: any) {
+    console.log(form.value)
    await fetch('https://myappchk.herokuapp.com/signup', {
       method: 'post', 
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(form.values)
+      body: JSON.stringify(form.value)
     })
   }
   ngOnInit(): void {
