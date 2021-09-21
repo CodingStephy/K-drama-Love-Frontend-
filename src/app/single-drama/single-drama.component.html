@@ -1,0 +1,27 @@
+
+<div class="singledrama">
+<h1 class='title'>{{shows.title}}
+<img class= 'singlemovie' [src]= "shows.image">
+</h1>
+
+
+<div class='info'>
+<p>Episodes : {{shows.episode_numbers}}</p>
+<p>Genres : {{shows.genre}}</p>
+<p> Year Released : {{shows.release_year}}</p>
+<p>Watch it on : {{shows.streaming_platform}}</p>
+<p>Writer :  {{shows.writer}}</p>
+<p >Synopsis : {{shows.description}}</p>
+<button (click)='addToList(shows)'> Add to list</button>
+<a class="nav-link" [routerLink]="'/mylist'" (click)="isMenuCollapsed = true"><button>My List</button></a>
+</div>
+<div class='flex'>
+<div *ngFor="let actors of shows.actors" class='actors'>
+<p >  {{actors.name}}</p>
+<img class='actor'[src]= "actors.photo">
+
+</div>
+</div>
+</div>
+
+<app-footer></app-footer>
