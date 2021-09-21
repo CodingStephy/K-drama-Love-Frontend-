@@ -12,8 +12,8 @@
 <p>Watch it on : {{shows.streaming_platform}}</p>
 <p>Writer :  {{shows.writer}}</p>
 <p >Synopsis : {{shows.description}}</p>
-<button (click)='addToList(shows)'> Add to list</button>
-<a class="nav-link" [routerLink]="'/mylist'" (click)="isMenuCollapsed = true"><button>My List</button></a>
+
+<a class="nav-link addto" [routerLink]="'/mylist'" (click)="addToList(shows)"><button>+ Add To List</button></a>
 </div>
 <div class='flex'>
 <div *ngFor="let actors of shows.actors" class='actors'>

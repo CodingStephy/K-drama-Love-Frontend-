@@ -1,4 +1,6 @@
+<div class='helper'>
 <img class="logo" src="https://res.cloudinary.com/dx3a3l6k0/image/upload/v1631742201/Cute_Love_Floral_Illustration_Logo_fpbc4m_mqq4aq.png"> 
+</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
   
 
@@ -8,8 +10,8 @@
   </button>
 
   <!-- Step 2: Add the ngbCollapse directive to the element below. -->
-  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-    <ul class="navbar-nav">
+  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse flexme">
+    <ul class="navbar-nav flexme">
       <li class="nav-item active">
         <!-- Step 4: Close the menu when a link is clicked. -->
         <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Home</a>
