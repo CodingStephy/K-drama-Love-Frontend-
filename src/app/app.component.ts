@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'KdramaLove';
   public isMenuCollapsed = true;
+  playerConfig = {
+    controls: 0,
+    mute: 1,
+    autoplay: 1
+  };
 }
