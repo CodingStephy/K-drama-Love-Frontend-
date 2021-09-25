@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap')
 
-.img-fluid
-    width: 240px
-    height: 300px
-
 .center 
     display: flex
     flex-direction: column
-    align-items: center
 
-.card
-    width: 1000px!important
-.card-title
-    font-size: 35px
-    font-family: 'Cinzel', serif
-.card-text 
-    font-size: 25px
-    margin-top: 5%
+@media only screen and (min-width: 1000px)
+    .img-fluid
+        width: 240px
+        height: 300px
+
+    .center 
+        align-items: center
+
+    .card
+        width: 1000px!important
+    .card-title
+        font-size: 35px
+        font-family: 'Cinzel', serif
+    .card-text 
+        font-size: 25px
+        margin-top: 5%
 
