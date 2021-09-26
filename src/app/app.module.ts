@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { MyListComponent } from './my-list/my-list.component';
 import { AboutComponent } from './about/about.component';
 import { AddtolistComponent } from './addtolist/addtolist.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -45,9 +46,7 @@ import { AddtolistComponent } from './addtolist/addtolist.component';
     AppRoutingModule,
     YouTubePlayerModule,
     NgbModule,
-    RouterModule.forRoot([
-      {path: 'login', component: LoginComponent}
-    ]),
+    FontAwesomeModule,
     FormsModule,
 
   ],

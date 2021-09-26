@@ -1,7 +1,8 @@
 <form #myform='ngForm' (ngSubmit)='handleSubmit(myform)'>
 <input class='input' type ='email' name='email' placeholder='email' ngModel>
 <input class='input' type ='password' name='password' placeholder='password' ngModel>
-<input  class='submit'type='submit' value='submit' (click)= 'onClick()'>
+<a class="nav-link addto" [routerLink]="'/mylist'" >
+<input  class='submit'type='submit' value='submit'></a>
 </form>
 
 <div class='center'>
